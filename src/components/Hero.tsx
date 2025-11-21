@@ -174,7 +174,7 @@ const Hero: React.FC = () => {
 
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight opacity-0 animate-slide-up-fade" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
-          <span className="block mb-2">AWS Cloud</span>
+          {/* <span className="block mb-2">AWS Cloud</span> */}
           <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent relative">
             {displayedText}
             <span className={`inline-block w-0.5 h-8 sm:h-12 md:h-16 bg-indigo-600 ml-1 ${isTypingComplete ? 'animate-blink' : 'animate-pulse'}`}></span>
