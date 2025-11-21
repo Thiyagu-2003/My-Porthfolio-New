@@ -481,7 +481,7 @@ const About: React.FC = () => {
               </div>
 
               {/* Certifications */}
-              <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6">
+              {/* <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6">
                 <h4 className="font-bold mb-4">Certifications</h4>
                 <div className="space-y-3">
                   <div>
@@ -497,7 +497,8 @@ const About: React.FC = () => {
                     <p className="text-sm text-gray-600 dark:text-gray-400">2025 - Present</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              
             </div>
 
             {/* RIGHT COLUMN */}
