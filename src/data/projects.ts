@@ -16,7 +16,7 @@ export const projects: ProjectType[] = [
     description: "Academic project: Built and deployed a static website using Amazon S3 with CloudFront CDN. Learned domain configuration with Route 53 and SSL certificate management.",
     image: "https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=400",
     technologies: ["Amazon S3", "CloudFront", "Route 53", "SSL/TLS"],
-    category: "beginner",
+    category: "advanced",
     github: "https://github.com/Thiyagu-2003/portfolio-s3",
     demo: "https://portfolio.demo.com"
   },

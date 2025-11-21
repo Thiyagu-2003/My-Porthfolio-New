@@ -24,9 +24,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end transition-all duration-500 ease-out group-hover:from-black/80">
           <div className="p-4 w-full">
             <div className="flex justify-between items-center">
-              <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 ease-out cursor-pointer border border-white/20">
+              {/* <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 ease-out cursor-pointer border border-white/20">
                 {project.category.toUpperCase().replace('-', ' ')}
-              </span>
+              </span> */}
               <div className="flex space-x-2">
                 {project.github && (
                   <a 
