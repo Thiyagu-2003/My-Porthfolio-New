@@ -1,8 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { skills } from '../data/skills';
 import { Cloud, Server, Database, Code, Shield, Settings } from 'lucide-react';
 
 const Skills: React.FC = () => {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const coreTechRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+    if (coreTechRef.current) {
+      observer.observe(coreTechRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const getCategoryIcon = (title: string) => {
     switch (title) {
       case 'AWS Core Services':
@@ -29,7 +60,7 @@ const Skills: React.FC = () => {
     >
       <div className="container mx-auto px-4 transition-all duration-300 ease-in-out">
         {/* Section Header */}
-        <div className="text-center mb-16 transform transition-all duration-700 ease-out">
+        <div ref={headerRef} className="text-center mb-16 transform transition-all duration-700 ease-out scroll-animate-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 transition-all duration-500 ease-in-out hover:text-indigo-600 dark:hover:text-indigo-400">Technical Expertise</h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-all duration-500 ease-in-out">
             Comprehensive skills in AWS cloud services, infrastructure management, and modern
@@ -106,7 +137,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Featured Technologies Showcase */}
-        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700 transition-all duration-700 ease-out transform hover:shadow-2xl hover:scale-[1.02]">
+        <div ref={coreTechRef} className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700 transition-all duration-700 ease-out transform hover:shadow-2xl hover:scale-[1.02] scroll-animate-right">
           <h3 className="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-all duration-500 ease-in-out hover:from-blue-700 hover:to-purple-700">
             Core Technologies
           </h3>
