@@ -15,11 +15,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative overflow-hidden h-52 group-hover:h-56 transition-all duration-500 ease-out">
+      <div className="relative overflow-hidden h-56 group-hover:h-64 transition-all duration-500 ease-out">
         <img 
           src={project.image} 
           alt={project.title} 
-          className={`w-full h-full object-cover transition-transform duration-700 ease-out ${isHovered ? 'scale-110 rotate-1' : 'scale-100'}`}
+          className={`w-full h-full object-cover transition-transform duration-700 ease-out ${isHovered ? 'scale-110' : 'scale-100'}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end transition-all duration-500 ease-out group-hover:from-black/80">
           <div className="p-4 w-full">
