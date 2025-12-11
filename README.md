@@ -1,4 +1,6 @@
-﻿<div align="center">
+---
+
+ <div align="center">
 
 # ☁️ AWS Cloud Practitioner Portfolio
 
@@ -13,7 +15,23 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4.21-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.1-38bdf8?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-[🌐 Live Demo](https://www.thiyagu.cloud/) • [📝 Report Bug](https://github.com/Thiyagu-2003/My-Porthfolio-New/issues) • [✨ Request Feature](https://github.com/Thiyagu-2003/My-Porthfolio-New/issues)
+---
+
+<p align="center">
+  <a href="https://www.thiyagu.cloud">
+    <img src="https://img.shields.io/badge/🌐%20Live%20Demo-2ea44f?style=for-the-badge&logo=google-chrome" />
+  </a>
+  
+  <a href="https://github.com/Thiyagu-2003/My-Porthfolio-New/issues" style="margin-left: 10px;">
+    <img src="https://img.shields.io/badge/📝%20Report%20Bug-d73a4a?style=for-the-badge&logo=bugatti" />
+  </a>
+
+  <a href="https://github.com/Thiyagu-2003/My-Porthfolio-New/issues" style="margin-left: 10px;">
+    <img src="https://img.shields.io/badge/✨%20Request%20Feature-8a2be2?style=for-the-badge&logo=sparkles" />
+  </a>
+</p>
+
+
 
 </div>
 
@@ -274,6 +292,7 @@ This project is open source and available under the [MIT License](LICENSE).
 </p>
 
 ---
+
 
 
 
