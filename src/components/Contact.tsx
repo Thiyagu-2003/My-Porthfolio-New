@@ -53,21 +53,40 @@ const Contact: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) return;
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/thiyaguscloud@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitSuccess(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        alert("There was an error sending your message. Please try again or email directly.");
+      }
+    } catch (error) {
+      alert("There was an error sending your message. Please try again or email directly.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitSuccess(true);
-
-      setFormData({ name: "", email: "", subject: "", message: "" });
-
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    }, 1500);
+    }
   };
 
   return (
